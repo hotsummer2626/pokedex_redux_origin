@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+body{
+  background: linear-gradient(to right, #d4d3dd,#efefbb);
+}
+
+.appWrapper{
+  max-width: 1024px;
+  height: max-content;
+  padding: 2rem;
+  margin: 0 auto;
+  display: grid;
+  gap: 1.5rem;
+}

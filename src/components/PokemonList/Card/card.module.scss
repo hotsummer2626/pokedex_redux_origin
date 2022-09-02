@@ -1,0 +1,57 @@
+@import "../../../mixins/colors.scss";
+
+.container {
+  display: grid;
+  justify-items: center;
+  border-radius: 1rem;
+  padding: 0.8rem;
+  text-align: center;
+  position: relative;
+  box-shadow: 3px 3px 3px #d0d0d0, -3px -3px 3px #f8f8f8;
+  transition: box-shadow 0.1s ease;
+  cursor: pointer;
+  &::after {
+    content: "";
+    border-radius: 1rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: all 0.1s ease;
+  }
+  &:hover {
+    box-shadow: 0 0 0 #d0d0d0, 0 0 0 #f8f8f8;
+    &::after {
+      box-shadow: inset 3px 3px 3px #d0d0d0, inset -3px -3px 3px #f8f8f8;
+    }
+  }
+  .number {
+    position: absolute;
+    top: 0.5rem;
+    left: 0.5rem;
+  }
+  .name {
+    font-size: 1.25rem;
+  }
+  .img {
+    &-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      background-color: #fff;
+      img {
+        width: 90%;
+      }
+    }
+  }
+  .type {
+    @include typeColor(background);
+    font-size: 0.983rem;
+    display: inline-block;
+    width: 55px;
+    border-radius: 5px;
+    margin: 1px;
+  }
+}
