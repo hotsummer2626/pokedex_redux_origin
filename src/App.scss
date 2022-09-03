@@ -20,3 +20,9 @@ body{
   display: grid;
   gap: 1.5rem;
 }
+
+@media (max-width:576px) {
+  .appWrapper{
+    padding: 1rem;
+  }
+}

@@ -24,7 +24,9 @@ const PokemonTypeSelectList = ({ setPokemonListByType }) => {
         className={styles.inputWrapper}
         onClick={() => setIsMenuOpen(!isMenuOpen)}
       >
+        <label htmlFor="pokemonType">Pokemon Type</label>
         <input
+          id="pokemonType"
           type="text"
           placeholder="Choose Type"
           readOnly
@@ -34,7 +36,11 @@ const PokemonTypeSelectList = ({ setPokemonListByType }) => {
       </div>
       <ul className={styles.dropdown}>
         {[{ id: 0, text: "All" }, ...TYPEICON].map((icon) => (
-          <li className={styles.item} onClick={handleSelectChange(icon.text)}>
+          <li
+            key={icon.id}
+            className={styles.item}
+            onClick={handleSelectChange(icon.text)}
+          >
             {icon.src && <img src={icon.src} alt="type-icon" />}
             <span className={styles.text}>{icon.text}</span>
           </li>
