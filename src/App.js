@@ -4,10 +4,14 @@ import PokemonList from "./components/PokemonList/pokemonList";
 import PokemonTypeSelectList from "./components/PokemonTypeSelectList/pokemonTypeSelectList";
 import { connect } from "react-redux";
 import { setPokemonListFromDatabase } from "./redux/actions/pokemon";
+import { addDamageRelationship } from "./postBackendData/postData";
+import { postTypeData } from "./postBackendData/postData";
 
 const App = ({ setPokemonListFromDatabase }) => {
   useEffect(() => {
-    setPokemonListFromDatabase(60);
+    setPokemonListFromDatabase(9);
+    // postTypeData()
+    // addDamageRelationship()
   });
   return (
     <div className="appWrapper">
